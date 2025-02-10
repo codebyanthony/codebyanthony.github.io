@@ -1,139 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy New Year 2025</title>
-  <style>
-    /* General Styling */
-    body {
-      background: linear-gradient(to bottom, #000428, #004e92);
-      color: white;
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-    
-    h1 {
-      font-size: 3rem;
-      animation: glow 1.5s infinite alternate;
-      z-index: 2;
-    }
-
-    h1 span {
-      color: #f39c12;
-      font-size: 4rem;
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #f39c12, 0 0 20px #e67e22;
-      }
-      to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #f39c12, 0 0 50px #e67e22;
-      }
-    }
-
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 1rem;
-      z-index: 2;
-    }
-
-    /* Fireworks Animation */
-    .firework {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    /* Confetti Animation */
-    .confetti {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 5px;
-      height: 5px;
-      background-color: #f39c12;
-      animation: confetti 2s infinite ease-in-out;
-    }
-
-    @keyframes confetti {
-      0% {
-        transform: translateX(-50%) translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateX(calc(-50% + 50px)) translateY(500px) rotate(360deg);
-        opacity: 0;
-      }
-    }
-
-    /* Fireworks Animation */
-    @keyframes firework1 {
-      0% {
-        transform: scale(0);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(10);
-        opacity: 0;
-      }
-    }
-    @keyframes firework2 {
-      0% {
-        transform: scale(0);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(8);
-        opacity: 0;
-      }
-    }
-    @keyframes firework3 {
-      0% {
-        transform: scale(0);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(6);
-        opacity: 0;
-      }
-    }
-    
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div>
-    <h1>🎉 Happy New Year <span>2025</span> 🎉</h1>
-    <footer>Wishing you joy, health, and success!</footer>
-  </div>
-
-  <!-- Fireworks -->
-  <div class="firework" style="top: 10%; animation: firework1 1s ease-out infinite;"></div>
-  <div class="firework" style="top: 20%; animation: firework2 1.5s ease-out infinite;"></div>
-  <div class="firework" style="top: 30%; animation: firework3 2s ease-out infinite;"></div>
-
-  <!-- Confetti -->
-  <div class="confetti" style="left: 10%; animation-delay: 0s;"></div>
-  <div class="confetti" style="left: 20%; animation-delay: 0.2s;"></div>
-  <div class="confetti" style="left: 30%; animation-delay: 0.4s;"></div>
-  <div class="confetti" style="left: 40%; animation-delay: 0.6s;"></div>
-  <div class="confetti" style="left: 50%; animation-delay: 0.8s;"></div>
-  <div class="confetti" style="left: 60%; animation-delay: 1s;"></div>
-  <div class="confetti" style="left: 70%; animation-delay: 1.2s;"></div>
-  <div class="confetti" style="left: 80%; animation-delay: 1.4s;"></div>
-  <div class="confetti" style="left: 90%; animation-delay: 1.6s;"></div>
-
+    <div class="container">
+        <h1>Will you be my Valentine?</h1>
+        <div class="buttons">
+            <button class="yes-button" onclick="handleYesClick()">Yes</button>
+            <button class="no-button" onclick="handleNoClick()">No</button>
+        </div>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWVxdncyMmRyZXpjZHF3MXRjazRmbHdlcDRid2luZzE0NGhvdjRkYyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/bKyQb654tHDq72daXJ/giphy.gif" alt="Cute GIF">
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
