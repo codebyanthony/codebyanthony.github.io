@@ -1,51 +1,108 @@
+/* General Styles */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f9e3e3;
-    font-family: 'Arial', sans-serif;
-    flex-direction: column;
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 2.5em;
-    color: #d32f2f;
-  }
-  
-  .buttons {
-    margin-top: 20px;
-  }
-  
-  .yes-button {
-    font-size: 1.5em;
-    padding: 10px 20px;
-    margin-right: 10px;
-    background-color: #4caf50;
+    padding: 0;
+    display: flex;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar {
+    width: 250px;
+    background: #0179fa;
     color: white;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background: white;
+    color: #007bff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sidebar button:hover {
+    background: #0056b3;
+    color: white;
+}
+
+.container {
+    margin-left: 270px;
+    padding: 20px;
+    flex: 1;
+    text-align: left;
+}
+
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-mode .sidebar {
+    background: #333;
+}
+
+/* Content Box Styles */
+.content-box {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+.dark-mode .content-box {
+    background: #2d2d2d;
+    border-color: #444;
+    color: #ffffff;
+}
+
+.content-box h1, .content-box h2 {
+    color: #0179fa;
+}
+
+.dark-mode .content-box h1, .dark-mode .content-box h2 {
+    color: #4da6ff;
+}
+
+.content-box p, .content-box li {
+    line-height: 1.6;
+    color: #333;
+}
+
+.dark-mode .content-box p, .dark-mode .content-box li {
+    color: #ddd;
+}
+
+.content-box ul, .content-box ol {
+    padding-left: 20px;
+}
+
+.content-box ul li, .content-box ol li {
+    margin-bottom: 10px;
+}
+
+/* Button Styles */
+button {
+    background: #0179fa;
+    color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .no-button {
-    font-size: 1.5em;
-    padding: 10px 20px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .gif_container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
+    font-weight: bold;
+}
+
+button:hover {
+    background: #0056b3;
+}
